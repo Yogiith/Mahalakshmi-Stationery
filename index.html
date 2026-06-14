@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>மகாலட்சுமி ஸ்டேசனரி</title>
+<title>மகாலட்சுமி ஸ்டேஷனரி</title>
 
 <style>
 body{
@@ -17,54 +17,159 @@ header{
     text-align:center;
     padding:30px;
 }
+header h1{
+    margin:0;
+    font-size:28px;
+}
+header p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+nav{
+    background:#333;
+    text-align:center;
+}
+nav a{
+    color:white;
+    display:inline-block;
+    padding:12px 20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{
+    background:#ff6600;
+}
 section{
     background:white;
     margin:20px;
     padding:20px;
     border-radius:10px;
 }
+section h2{
+    color:#ff6600;
+    border-bottom:2px solid #ffe0cc;
+    padding-bottom:8px;
+}
 .offer{
-    background:#fff3cd;
-    border-left:5px solid orange;
+    background:#ffe6cc;
+    border-left:5px solid #ff6600;
+    padding:15px;
+    margin:20px;
+    border-radius:10px;
+    font-weight:bold;
+    text-align:center;
+    font-size:18px;
+}
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+.product-card{
+    background:#f9f9f9;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    width:150px;
+    text-align:center;
+}
+.product-card img{
+    width:100%;
+    border-radius:8px;
+}
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+}
+.gallery img{
+    width:200px;
+    border-radius:10px;
 }
 footer{
     background:#333;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
+    margin-top:20px;
+}
+iframe{
+    width:100%;
+    height:250px;
+    border:0;
+    border-radius:10px;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-    <h1>மகாலட்சுமி ஸ்டேசனரி</h1>
-    <p>புத்தகங்கள் | நோட்டுகள் | அலுவலகப் பொருட்கள்</p>
+    <h1>மகாலட்சுமி ஸ்டேஷனரி</h1>
+    <p>Mahalakshmi Stationery - Your Local Stationery Shop</p>
 </header>
 
-<section>
-    <h2>எங்களை பற்றி</h2>
-    <p>உங்களுக்கு தேவையான அனைத்து ஸ்டேசனரி பொருட்களும் சிறந்த விலையில் கிடைக்கும்.</p>
+<nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="offer">
+    🎉 Special Offer: 10% off on Notebooks this week! 🎉
+</div>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Mahalakshmi Stationery — your one-stop shop for all stationery needs. We offer quality notebooks, pens, art supplies, and office essentials at affordable prices.</p>
 </section>
 
-<section class="offer">
-    <h2>🎉 தற்போதைய சலுகை</h2>
-    <p>₹500க்கு மேல் வாங்கும் வாடிக்கையாளர்களுக்கு 10% தள்ளுபடி.</p>
+<section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://placehold.co/150x150?text=Notebooks" alt="Notebooks">
+            <h3>Notebooks</h3>
+            <p>₹20 onwards</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/150x150?text=Pens" alt="Pens">
+            <h3>Pens</h3>
+            <p>₹10 onwards</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/150x150?text=Art+Supplies" alt="Art Supplies">
+            <h3>Art Supplies</h3>
+            <p>₹50 onwards</p>
+        </div>
+        <div class="product-card">
+            <img src="https://placehold.co/150x150?text=Files" alt="Files & Folders">
+            <h3>Files & Folders</h3>
+            <p>₹15 onwards</p>
+        </div>
+    </div>
 </section>
 
-<section>
-    <h2>📞 தொடர்புக்கு</h2>
-    <p>மொபைல்: +91 9500691699</p>
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="https://placehold.co/200x150?text=Shop+Photo+1" alt="Shop Photo 1">
+        <img src="https://placehold.co/200x150?text=Shop+Photo+2" alt="Shop Photo 2">
+        <img src="https://placehold.co/200x150?text=Shop+Photo+3" alt="Shop Photo 3">
+    </div>
 </section>
 
-<section>
-    <h2>📍 முகவரி</h2>
-    <p>உங்கள் முகவரியை இங்கு சேர்க்கவும்.</p>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Address: 71, Salem Main Road Thottiyam</p>
+    <p>📞 Phone: +91 9500691699</p>
+    <p>🕒 Open: 9 AM - 9 PM (Mon-Sat)</p>
 </section>
 
 <footer>
-    © 2026 மகாலட்சுமி ஸ்டேசனரி
+    <p>&copy; 2026 Mahalakshmi Stationery. All rights reserved.</p>
 </footer>
 
 </body>
