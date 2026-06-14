@@ -3,103 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>மகாலட்சுமி ஸ்டேஷனரி</title>
+<title>மகாலட்சுமி ஸ்டேசனரி</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+*{
+    box-sizing:border-box;
+}
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin:0;
     background:#f4f4f4;
+    color:#333;
 }
+
+/* HERO HEADER */
 header{
-    background:#ff6600;
+    background: linear-gradient(135deg, #ff6600, #cc5200);
     color:white;
     text-align:center;
-    padding:30px;
+    padding:60px 20px;
 }
 header h1{
     margin:0;
-    font-size:28px;
+    font-size:32px;
+    font-weight:700;
 }
 header p{
-    margin:5px 0 0;
-    font-size:14px;
+    margin:8px 0 20px;
+    font-size:15px;
+    opacity:0.9;
 }
+.hero-btn{
+    display:inline-block;
+    background:white;
+    color:#ff6600;
+    padding:10px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition: all 0.3s ease;
+}
+.hero-btn:hover{
+    background:#fff5ec;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* NAVIGATION */
 nav{
     background:#333;
     text-align:center;
+    position: sticky;
+    top:0;
+    z-index:100;
 }
 nav a{
     color:white;
     display:inline-block;
-    padding:12px 20px;
+    padding:14px 20px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:600;
+    transition: all 0.3s ease;
 }
 nav a:hover{
     background:#ff6600;
+    color:white;
 }
-section{
-    background:white;
-    margin:20px;
-    padding:20px;
-    border-radius:10px;
-}
-section h2{
-    color:#ff6600;
-    border-bottom:2px solid #ffe0cc;
-    padding-bottom:8px;
-}
+
+/* OFFER BANNER */
 .offer{
     background:#ffe6cc;
     border-left:5px solid #ff6600;
     padding:15px;
     margin:20px;
     border-radius:10px;
-    font-weight:bold;
+    font-weight:600;
     text-align:center;
     font-size:18px;
+    animation: pulse 2s infinite;
 }
+@keyframes pulse{
+    0%,100%{ transform: scale(1); }
+    50%{ transform: scale(1.02); }
+}
+
+/* SECTIONS */
+section{
+    background:white;
+    margin:20px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+section h2{
+    color:#ff6600;
+    border-bottom:3px solid #ffe0cc;
+    padding-bottom:8px;
+    display:inline-block;
+}
+
+/* PRODUCTS */
 .products{
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
+    gap:18px;
     justify-content:center;
 }
 .product-card{
-    background:#f9f9f9;
-    border:1px solid #ddd;
-    border-radius:10px;
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:12px;
     padding:15px;
-    width:150px;
+    width:160px;
     text-align:center;
+    transition: all 0.3s ease;
+}
+.product-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255,102,0,0.2);
+    border-color:#ff6600;
 }
 .product-card img{
     width:100%;
     border-radius:8px;
 }
+.product-card h3{
+    margin:10px 0 5px;
+    font-size:16px;
+}
+.product-card p{
+    color:#ff6600;
+    font-weight:600;
+    margin:0;
+}
+
+/* GALLERY */
 .gallery{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
     justify-content:center;
 }
 .gallery img{
     width:200px;
-    border-radius:10px;
+    border-radius:12px;
+    transition: transform 0.3s ease;
 }
+.gallery img:hover{
+    transform: scale(1.05);
+}
+
+/* CONTACT */
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:12px 0;
+    font-size:15px;
+}
+.contact-item i{
+    color:#ff6600;
+    font-size:20px;
+    width:25px;
+    text-align:center;
+}
+
+/* FOOTER */
 footer{
     background:#333;
     color:white;
     text-align:center;
     padding:20px;
     margin-top:20px;
+    font-size:14px;
 }
-iframe{
-    width:100%;
-    height:250px;
-    border:0;
-    border-radius:10px;
+
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp-float{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index:999;
+}
+.whatsapp-float:hover{
+    transform: scale(1.1);
+    background:#1ebe5b;
 }
 </style>
 </head>
@@ -108,6 +213,7 @@ iframe{
 <header>
     <h1>மகாலட்சுமி ஸ்டேஷனரி</h1>
     <p>Mahalakshmi Stationery - Your Local Stationery Shop</p>
+    <a href="#products" class="hero-btn">Shop Now</a>
 </header>
 
 <nav>
@@ -155,7 +261,7 @@ iframe{
 <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-        <img src="Board1.jpeg" alt="Notice Board">
+        <img src="Board1.jpeg" alt="Shop Photo 1">
         <img src="https://placehold.co/200x150?text=Shop+Photo+2" alt="Shop Photo 2">
         <img src="https://placehold.co/200x150?text=Shop+Photo+3" alt="Shop Photo 3">
     </div>
@@ -163,14 +269,28 @@ iframe{
 
 <section id="contact">
     <h2>Contact Us</h2>
-    <p>📍 Address: 71, Salem Main Road Thottiyam</p>
-    <p>📞 Phone: +91 9500691699</p>
-    <p>🕒 Open: 9 AM - 9 PM (Mon-Sat)</p>
+    <div class="contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>71, Salem Main Road, Thottiyam, Trichy</span>
+    </div>
+    <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 9500691699</span>
+    </div>
+    <div class="contact-item">
+        <i class="fa-solid fa-clock"></i>
+        <span>Open: 9 AM - 9 PM (Mon-Sat)</span>
+    </div>
 </section>
 
 <footer>
     <p>&copy; 2026 Mahalakshmi Stationery. All rights reserved.</p>
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919500691699" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
